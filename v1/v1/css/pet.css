@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap");
+.canva {
+  height: 2%;
+  width: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 50%;
+  left: 20%;
+  transition: all 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: move 35s 15s linear infinite;
+  z-index: 100000;
+}
+
+.tooltip {
+  padding: 10px;
+  position: absolute;
+  top: 24%;
+  left: 15%;
+  border-radius: 15px;
+  border: 2px solid green;
+  background: linear-gradient(135deg, hotpink 50%, #f7f6cf 0%);
+  animation: del 15s 0s linear 1;
+  transition: all 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.tooltipTxt {
+  font-size: 25px;
+  font-family: "East Sea Dokdo", cursive;
+  background: linear-gradient(to right, #6952c5 0%, #da4167 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ghost {
+  position: relative;
+  border: 0.5vmin solid white;
+  width: 30vmin;
+  height: 30vmin;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom: 0;
+  box-sizing: border-box;
+  background: linear-gradient(
+    rgba(235, 150, 170, 0.8),
+    rgba(154, 217, 219, 0.8),
+    rgba(152, 212, 187, 0.8)
+  );
+  animation: change 35s 15s linear infinite;
+  transition: all 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.legs {
+  display: flex;
+  width: 30vmin;
+}
+
+.legs div {
+  width: 7.5vmin;
+  height: 6vmin;
+  border: 0.5vmin solid white;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-top: 0;
+  background: linear-gradient(
+    rgba(152, 212, 187, 0.8),
+    rgba(154, 217, 219, 0.8),
+    rgba(235, 150, 170, 0.8)
+  );
+  animation: changeMe 35s 15s linear infinite;
+  transition: all 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.heart {
+  position: relative;
+  width: 5vmin;
+  height: 5vmin;
+  background-color: #da4167;
+  transform: translate(22vmin, 6vmin) rotate(25deg) scale(0.5);
+}
+
+.heart:before {
+  position: absolute;
+  bottom: 0px;
+  left: -2.5vmin;
+  width: 5vmin;
+  height: 5vmin;
+  content: "";
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border-radius: 50%;
+  background-color: #da4167;
+}
+.heart:after {
+  position: absolute;
+  top: -2.5vmin;
+  right: 0px;
+  width: 5vmin;
+  height: 5vmin;
+  content: "";
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+
+  background-color: #da4167;
+}
+
+.left-hand,
+.right-hand {
+  position: absolute;
+  width: 4vmin;
+  height: 4vmin;
+  border: 0.5vmin solid white;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-top: 0;
+}
+
+.eyes {
+  position: absolute;
+  width: 5vmin;
+  height: 5vmin;
+  background: #000;
+  border-radius: 50%;
+  top: 13vmin;
+  left: 5vmin;
+  box-shadow: 14vmin 0;
+}
+
+.eyes:before {
+  content: "";
+  position: absolute;
+  background: #ffeecf;
+  width: 2.5vmin;
+  height: 2.5vmin;
+  border-radius: 50%;
+  left: 2vmin;
+  box-shadow: 14vmin 0 #ffeecf;
+}
+
+.mouth {
+  position: absolute;
+  width: 4vmin;
+  height: 2vmin;
+  border: 0.7vmin solid white;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-top: 0;
+  top: 16vmin;
+  left: 12vmin;
+}
+
+.left-hand {
+  top: 22vmin;
+  left: 6vmin;
+  transform: rotate(-45deg);
+}
+
+.right-hand {
+  top: 22vmin;
+  left: 18vmin;
+  transform: rotate(45deg);
+}
+
+@keyframes move {
+  0% {
+    top: 40%;
+    left: 20%;
+  }
+  30% {
+    left: 60%;
+  }
+  50% {
+    top: 20%;
+    left: 80%;
+  }
+  70% {
+    top: 40%;
+    left: 60%;
+  }
+  90% {
+    top: 30%;
+    left: 40%;
+  }
+  100% {
+    top: 40%;
+    left: 20%;
+  }
+}
+
+@keyframes change {
+  0% {
+    background: linear-gradient(
+      rgba(235, 150, 170, 0.8),
+      rgba(154, 217, 219, 0.8),
+      rgba(152, 212, 187, 0.8)
+    );
+  }
+  30% {
+    background: linear-gradient(
+      rgba(188, 97, 118, 0.8),
+      rgba(215, 228, 151, 0.8),
+      rgba(152, 212, 187, 0.8)
+    );
+  }
+  70% {
+    background: linear-gradient(
+      rgba(85, 67, 106, 0.8),
+      rgba(250, 4, 127, 0.8),
+      rgba(36, 112, 154, 0.8)
+    );
+  }
+  100% {
+    background: linear-gradient(
+      rgba(235, 150, 170, 0.8),
+      rgba(154, 217, 219, 0.8),
+      rgba(152, 212, 187, 0.8)
+    );
+  }
+}
+
+@keyframes changeMe {
+  0% {
+    background: linear-gradient(
+      rgba(152, 212, 187, 0.8),
+      rgba(154, 217, 219, 0.8),
+      rgba(235, 150, 170, 0.8)
+    );
+  }
+  30% {
+    background: linear-gradient(
+      rgba(152, 212, 187, 0.8) rgba(215, 228, 151, 0.8),
+      rgba(188, 97, 118, 0.8)
+    );
+  }
+  70% {
+    background: linear-gradient(
+      rgba(36, 112, 154, 0.8),
+      rgba(250, 4, 127, 0.8),
+      rgba(85, 67, 106, 0.8)
+    );
+  }
+  100% {
+    background: linear-gradient(
+      rgba(152, 212, 187, 0.8),
+      rgba(154, 217, 219, 0.8),
+      rgba(235, 150, 170, 0.8)
+    );
+  }
+}
+
+@keyframes del {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.legal {
+  margin-left: 40px;
+  font-size: 40px;
+  font-family: "East Sea Dokdo", cursive;
+  background: linear-gradient(to right, #6952c5 0%, #da4167 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
